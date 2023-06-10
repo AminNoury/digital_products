@@ -46,7 +46,7 @@ class Payment(models.Model):
     price = models.PositiveIntegerField(_('price'), default=0)
     status = models.PositiveSmallIntegerField(_('status'), choices=STATUS_CHOICES, default=STATUS_VOID, db_index=True)
     device_uuid = models.CharField(_('device uuid'), max_length=40, blank=True)
-    token = models.CharField()
+    token = models.CharField(_('token'), max_length=50)
     phone_number = models.BigIntegerField(_('phone number'), validators=[validate_phone_number], db_index=True)
     consumed_code = models.PositiveIntegerField(_('consumed reference code'), null=True, db_index=True)
     created_time = models.DateTimeField(_('creation time'), auto_now_add=True, db_index=True)
