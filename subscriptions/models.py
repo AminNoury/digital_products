@@ -14,7 +14,7 @@ class Package(models.Model):
     price = models.PositiveIntegerField(_('price'))
     # gateway = models.ManyToManyField('payments.Gateway')
     duration = models.DurationField(_('duration'), null=True, blank=True)
-    create_time = models.DateTimeField(_('create time'), auto_now_add=True)
+    created_time = models.DateTimeField(_('create time'), auto_now_add=True)
     update_time = models.DateTimeField(_('update time'), auto_now_add=True)
 
     class Meta:
